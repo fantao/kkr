@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+
+button {
+    border: 1px solid #797979;
+    border-radius: 3px;
+    text-decoration: none;
+    background:#FFFFFF;
+    color: #2D1D1D;
+    font-size: 12px;
+    outline-color: #FF6;
+    line-height: 14px;
+    margin: 0 1px 0 0;
+}
+button:hover {
+    background: #CDF0FF;
+}
+body {
+    background: #FFFFFF;
+    color: #0a0a0a;
+    font-family: Arial,微软雅黑;
+    overflow:hidden;
+}
+input {
+    background: none;
+    color: #b3bfcb;
+    border-width: 1px;
+    border: none;
+}
+::-webkit-scrollbar{
+width:6px;
+height:6px;
+background-color:#fff;
+}
+::-webkit-scrollbar:hover{
+background-color:#eee;
+}
+::-webkit-scrollbar-thumb{
+min-height:5px;
+min-width:5px;
+-webkit-border-radius:20px;border:1px solid#888;
+::-webkit-border-radius:1px;
+background-color: #DDD;
+}
+::-webkit-scrollbar-thumb:hover{
+min-height:5px;
+min-width:5px;
+-webkit-border-radius:20px;border:1px solid#444;
+background-color: #AAA;
+}
+::-webkit-scrollbar-thumb:active{
+-webkit-border-radius:20px;border:1px solid#444;
+background-color: #AAA;
+}
+::-webkit-scrollbar-button{
+    height:5px;
+    color:#999;
+    background:#FFF;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(231,231,231,0.4);
+}
+scrollbar-arrow-color:{
+    color:#333;
+}
+#mainbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: content-box;
+    width: 320px;
+    overflow: auto;
+    overflow-x: hidden;
+    padding-bottom: 30px;
+}
+section#base {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b3bfcb;
+}
+section#stub .panel {
+    box-sizing: border-box;
+    padding-bottom: 15px;
+}
+section.slot {
+    margin: 0;
+}
+#mainarea {
+    margin-left: 320px;
+    overflow: auto;
+}

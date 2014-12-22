@@ -1,0 +1,254 @@
+/*
+ * Mobile Device Stylesheets
+ * 
+================================================== */
+
+/* Smaller than standard 720px (devices and browsers) */
+@media only screen and (max-width: 980px) {
+	.contaner{
+		max-width: 90%;
+	}
+	li.last{
+		float: none;
+		clear: both;
+		margin-top: 20px!important;
+		display: inline-block!important;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 890px){
+	
+	.small-screen-device-nav{
+		display: block;
+		margin-top: -50px;
+		margin-bottom: 50px;
+	}
+	
+	.bp-klein-group-avatar img{
+        margin-top: 0px!important;
+    }
+	
+	#groups-list img.avatar,
+	#members-list img.avatar{
+		width: 100%!important;
+		height: auto;
+	}
+	
+	#groups-order-by{
+		display: block;
+		clear: both;
+	}
+
+}
+
+/* Smaller Screen Size */
+
+@media only screen and (max-width: 767px) and (min-width: 225px){
+	.container {
+		width: auto;
+		max-width: 420px;
+	}
+	
+	body {
+        line-height: 160%;
+    }
+	
+	#groups-list li,
+	#members-list li{
+		clear: both;
+		display: inline-block;
+		width: 100%;
+	}
+	
+	#groups-list img.avatar,
+	#members-list img.avatar{
+		width: 100%!important;
+		height: auto;
+	}
+	
+	.klein-groups-item .col-md-8{
+		padding-left: 20px;
+	}
+	a#wp-admin-bar-user-info img.avatar,
+	a#logo-anchor img{
+		width: auto;
+	}
+    #klein-top-updates-nav {
+        right: auto;
+    }
+	
+	
+    
+    #site-description {
+        display: inline-block;
+    }
+    
+    #site-description h1 {
+        font-size: 1.8em;
+    }
+    
+    #site-description h2 {
+        font-size: 2.5em;
+    }
+    
+    
+    
+    .entry-title,h1,h2,h3,h4,h5,h6 {
+        margin-bottom: 20px;
+        line-height: 120%;
+    }
+    
+    .entry-title,h1 {
+        font-size: 26px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+    
+    h5 {
+        font-size: 18px;
+    }
+    
+    h6 {
+        font-size: 16px;
+    }
+    
+    .front-page-slider-slide {
+        height: auto;
+    }
+    
+    .bx-has-pager {
+        margin-top: 20px;
+    }
+    
+    .widget:last-child {
+        margin-bottom: 20px;
+    }
+    
+    .item-list-tabs#subnav li,.item-list-tabs li {
+        width: 100%;
+    }
+    .item-list-tabs{
+		width: 100%;
+	}
+    .labeled-box {
+        right: 0;
+    }
+    
+    .pull-right,.pull-left {
+        float: none!important;
+    }
+	
+	.nav-next.pull-right,
+	#site-navigation.pull-right{
+		float: right!important;
+	}
+	
+    .nav-previous.pull-left,
+    .site-branding.pull-left {
+        float: left!important;
+    }
+	
+	#reply-title, .comments-title{
+		font-size: 16px;
+	}
+    
+    #font-page-highlights-nav {
+        margin-top: 20px;
+    }
+    
+    .nav-next.pull-right,
+    #font-page-highlights-nav,.desktop-menu .pull-right,.main-navigation.pull-right {
+        float: right;
+    }
+    
+    #bp-klein-user-bar #bp-klein-user-bar-action .pull-right {
+		display: inline-block;
+		margin-top: 10px;
+		float: none!important;
+    }
+	
+    
+    .blog-author .bp-profile-link,.blog-author .author-post-link {
+        width: 100%;
+    }
+    
+    .blog-author .bp-profile-link a,.blog-author .author-post-link a {
+        width: 100%;
+    }
+    
+    .item-list-tabs#subnav li.last,.item-list-tabs#subnav li.last,.item-list-tabs li.last,li.last {
+        display: inline-block;
+        float: none;
+        clear: both;
+        margin-top: 10px;
+        border-bottom: none;
+    }
+    
+    .item-list-tabs#subnav {
+        margin-top: -15px;
+    }
+    
+    .item-list-tabs li.feed {
+        margin: 0;
+    }
+    
+    .item-list-tabs li.feed a,.item-list-tabs#subnav li#activity-filter-select,li#groups-order-select {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 0 !important;
+    }
+	
+	.woocommerce table.cart td.actions .button.alt, .woocommerce-page table.cart td.actions .button.alt,
+	.woocommerce-page #content table.cart td.actions .button.alt
+	{
+		margin-top: 20px;
+		display: block;
+		clear: both;
+	}
+    
+    #groups-directory-form label {
+        clear: both;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+	
+    #main .bx-wrapper .bx-pager {
+        bottom: -46px !important;
+        text-align: left;
+    }
+    
+    #main #front-page-highlights-nav {
+        margin-top: 10px;
+    }
+	
+	#search-message-form{
+		margin-top: 20px;
+		display: inline-block;
+	}
+	
+
+	
+}
+
+@media only screen and (max-width: 455px) and (min-width: 225px){
+	/*= Modal
+	----------- */
+	.klein .login-remember,
+	.klein .login-submit,
+	.klein .login-facebook-connect{
+		clear: both;
+		display: block;
+		float: none;
+	}
+}

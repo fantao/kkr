@@ -25,7 +25,7 @@ add_filter( 'login_headerurl', 'klein_login_logo_url' );
 	?>
     <style type="text/css">
 	
-	 @import url('http://fonts.googleapis.com/css?family=PT+Sans:400,700|Montserrat:700');
+	 @import url('http://fonts.useso.com/css?family=PT+Sans:400,700|Montserrat:700');
        
 		.login label {
 			color: #BDC3C7;

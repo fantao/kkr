@@ -76,7 +76,7 @@ add_action( 'widgets_init', 'ibuddy_widgets_init' );
 function ibuddy_scripts() {
 	wp_enqueue_style( 'iBuddy-style', get_stylesheet_uri() );
 	/* Google Fonts */
-	wp_enqueue_style( 'iBuddy-google-fonts' ,'http://fonts.googleapis.com/css?family=Oswald' );
+	wp_enqueue_style( 'iBuddy-google-fonts' ,'http://fonts.useso.com/css?family=Oswald' );
 	
 	wp_enqueue_script( 'iBuddy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

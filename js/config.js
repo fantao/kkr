@@ -7,7 +7,6 @@ define(function() {
           'jquery': 'comlib/common/jquery-1.10.2.min',
           'react': 'comlib/react/react-with-addons.min',
           'JSXTransformer': "comlib/react/JSXTransformer",
-          'layer': 'comlib/layer-v1.8.5/layer/layer.min',
           'codemirrorcss' : '',
           'url': 'comlib/common/url.min',
           'utility': ModulePath + 'utility',

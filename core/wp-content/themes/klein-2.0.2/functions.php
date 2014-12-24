@@ -255,11 +255,11 @@ function klein_ie8_fix(){
 		<![endif]-->
 	
 		<!--[if gt IE 8]>
-			<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+			<link href="http://fonts.useso.com/css?family=PT+Sans:400,700|Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
 		<![endif]-->
 
 		<!--[if !IE]> -->
-			<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+			<link href="http://fonts.useso.com/css?family=PT+Sans:400,700|Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
 		<!-- <![endif]-->
 	<?php
 }

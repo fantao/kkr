@@ -473,7 +473,7 @@ if( !function_exists( 'klein_user_nav') ){
 		<?php $notifications = bp_core_get_notifications_for_user( get_current_user_id() ); ?>
 	
 			<section id="klein-top-updates">
-				<a id="klein-top-updates-btn" class="btn btn-primary" href="#" title="<?php _e('Updates','klein'); ?>">
+				<a id="klein-top-updates-btn" class="" href="#" title="<?php _e('Updates','klein'); ?>">
 					<i class="glyphicon glyphicon-chevron-down"></i> 
 					<?php if( !empty( $notifications ) ){ ?>
 						<span id="klein-top-updates-badge"><?php echo count( $notifications ); ?></span>

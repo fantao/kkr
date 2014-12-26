@@ -651,7 +651,7 @@ a.front-page-highlights-nav-left:active,a.front-page-highlights-nav-right:active
 	========================== */
 #header {
     padding: 1em 0;
-    background: #2C3E50;
+    background: #FFFFFF;
 }
 
 #header h1 {
@@ -735,21 +735,30 @@ a.front-page-highlights-nav-left:active,a.front-page-highlights-nav-right:active
 .blog-content-title a {
     color: #2C3E50;
 }
-
+.look-like {
+    display: block;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80px;
+    background: #222;
+    text-align: center;
+}
 .blog-author {
     display: block;
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 15%;
+    width: 100%;
     background: #ECF0F1;
     text-align: center;
 }
 
 .blog-author-name {
     display: block;
-    padding: 2px 2px 8px;
+    padding: 0;
 }
 
 .blog-author-avatar img {
@@ -782,7 +791,7 @@ a.front-page-highlights-nav-left:active,a.front-page-highlights-nav-right:active
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 12px 0;
+    padding: 0;
     width: 100%;
     border: 1px solid #e9e9e9;
     background: #ECF0F1;
@@ -810,7 +819,7 @@ a.front-page-highlights-nav-left:active,a.front-page-highlights-nav-right:active
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 85%;
-    border-top: 5px solid #BDC3C7;
+    border-top: 1px solid #111;
 }
 
 .single .blog-content {
@@ -1089,7 +1098,7 @@ a.front-page-highlights-nav-left:active,a.front-page-highlights-nav-right:active
 }
 
 .desktop-menu ul li a {
-    color: #ECF0F1;
+    color: #666;
 }
 
 .desktop-menu ul.sub-menu,.desktop-menu ul.children {

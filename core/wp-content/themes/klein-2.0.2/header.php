@@ -35,16 +35,62 @@
 	$container_class = ot_get_option( 'container', 'fluid' );
 ?>
 <div id="page" class="hfeed site <?php echo $container_class; ?>">
-	<?php do_action( 'before' ); ?>
-	<div id="bp-klein-top-bar">
-		<nav id="bp-klein-user-bar" class="container" role="navigation">
+	<?php do_action( 'before' ); ?>	
+	<header id="header" class="site-header" role="banner">
+		
+		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-sm-8">
-					<p class="remove-bottom site-description">
-						<?php bloginfo('description'); ?>
-					</p>
+				<div class="site-branding col-md-2 col-sm-2" id="site-name">
+					<a id="logo-anchor" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) . ' - ' . get_bloginfo( 'description' ) ); ?>" rel="home">
+						<?php
+							$default_logo = get_template_directory_uri() . '/logo.png';
+							$logo = ot_get_option( 'logo', $default_logo );
+						?>
+						<h1><?php bloginfo( 'name' ); ?></h1>
+						<img src="<?php echo $logo; ?>" alt="<?php echo get_bloginfo( 'name' ); ?> - <?php echo get_bloginfo( 'description' ); ?>"/>
+					</a>
 				</div>
-				<div id="bp-klein-user-bar-action" class="col-md-4 col-sm-4">
+				<div class="desktop-menu col-md-2 col-sm-2 remove-bottom site-description">
+                    <?php bloginfo('description'); ?>
+                </div>
+				<div class="desktop-menu col-md-6 col-sm-6 show-on-desktops">
+                    
+					<div class="pull-right">
+					<?php
+						
+						$defaults = array(
+							'theme_location'  => 'primary',
+							'container'       => 'div',
+							'container_class' => 'navigation-desktop',
+							'container_id'    => 'main-menu-desktop',
+							'menu_class'      => 'menu desktop',
+						);
+					?>
+					<?php wp_nav_menu( $defaults ); ?>
+					</div>
+
+                    
+					<div class="clearfix"></div>
+				</div>
+				
+				<div class="small-screen-device-nav hide-on-desktops col-md-6 col-sm-6">
+					<nav id="site-navigation" class="main-navigation pull-right" role="navigation">
+						<div id="menu">
+							<div data-dropdown=".menu.mobile" class="nav-btn glyphicon glyphicon-align-justify icon-32" aria-hidden="true"></div>
+						</div>
+					</nav><!-- #site-navigation -->
+					<?php
+						$defaults = array(
+							'theme_location'  => 'primary',
+							'container'       => 'ul',
+							'container_class' => 'navigation',
+							'container_id'    => 'main-menu',
+							'menu_class'      => 'menu mobile container row',
+						);
+						?>
+					<?php wp_nav_menu( $defaults ); ?>
+				</div>
+                <div id="bp-klein-user-bar-action" class="col-md-2 col-sm-2">
 					<div class="pull-right">
 						<?php if( is_user_logged_in() ){ ?>
 							<?php
@@ -54,14 +100,14 @@
 							?>
 							<?php if( function_exists('bp_core_get_user_domain' ) ){ ?>
 								
-								<a id="klein-top-bp-profile-link" class="btn btn-primary" href="<?php echo bp_core_get_user_domain( $current_user->ID );?>" title="<?php _e('My Profile','klein'); ?>">
+								<a id="klein-top-bp-profile-link" class="" href="<?php echo bp_core_get_user_domain( $current_user->ID );?>" title="<?php _e('My Profile','klein'); ?>">
 									<?php echo $current_user->display_name; ?>
 								</a>
 								<?php klein_user_nav(); ?>
 							<?php } ?>
 						<?php }else{ ?>
 							<a data-toggle="modal" id="klein-login-btn" class="btn btn-primary" href="#klein_login_modal" title="<?php _e( 'Login', 'klein' ); ?>"><i class="icon-lock"></i> <?php _e( 'Login', 'klein' ); ?></a>
-							<?php echo str_replace( '<a', '<a id="klein-register-btn" title="'.__('Register','klein').'" class="btn btn-primary" ', wp_register('', '', false)); ?>
+							<?php echo str_replace( '<a', '<a id="klein-register-btn" title="'.__('Register','klein').'" class="btn-small btn-primary" ', wp_register('', '', false)); ?>
 							<div class="modal fade" id="klein_login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 								<div class="modal-dialog">
 									<div class="modal-content">
@@ -81,60 +127,6 @@
 							</div><!-- /.modal -->
 						<?php } ?>
 					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
-
-	
-	<header id="header" class="site-header" role="banner">
-		
-		<div class="container">
-			<div class="row">
-				<div class="site-branding col-md-2 col-sm-2" id="site-name">
-					<a id="logo-anchor" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) . ' - ' . get_bloginfo( 'description' ) ); ?>" rel="home">
-						<?php
-							$default_logo = get_template_directory_uri() . '/logo.png';
-							$logo = ot_get_option( 'logo', $default_logo );
-						?>
-						<h1><?php bloginfo( 'name' ); ?></h1>
-						<img src="<?php echo $logo; ?>" alt="<?php echo get_bloginfo( 'name' ); ?> - <?php echo get_bloginfo( 'description' ); ?>"/>
-					</a>
-				</div>
-				
-				<div class="desktop-menu col-md-10 col-sm-10 show-on-desktops">
-					<div class="pull-right">
-					<?php
-						
-						$defaults = array(
-							'theme_location'  => 'primary',
-							'container'       => 'div',
-							'container_class' => 'navigation-desktop',
-							'container_id'    => 'main-menu-desktop',
-							'menu_class'      => 'menu desktop',
-						);
-					?>
-					<?php wp_nav_menu( $defaults ); ?>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				
-				<div class="small-screen-device-nav hide-on-desktops col-md-8 col-sm-8">
-					<nav id="site-navigation" class="main-navigation pull-right" role="navigation">
-						<div id="menu">
-							<div data-dropdown=".menu.mobile" class="nav-btn glyphicon glyphicon-align-justify icon-32" aria-hidden="true"></div>
-						</div>
-					</nav><!-- #site-navigation -->
-					<?php
-						$defaults = array(
-							'theme_location'  => 'primary',
-							'container'       => 'ul',
-							'container_class' => 'navigation',
-							'container_id'    => 'main-menu',
-							'menu_class'      => 'menu mobile container row',
-						);
-						?>
-					<?php wp_nav_menu( $defaults ); ?>
 				</div>	
 			</div>	
 		</div>

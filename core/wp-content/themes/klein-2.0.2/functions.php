@@ -393,6 +393,20 @@ if( !function_exists( 'klein_custom_background' ) ){
 <?php
 } // end custom background function
 
+//Added by ftbase BEGIN
+
+/**
+ * 让用户前台默认不显示工具栏
+ */
+function set_user_admin_bar_false_by_default($user_id) {
+    update_user_meta( $user_id, 'show_admin_bar_front', 'false' );
+    update_user_meta( $user_id, 'show_admin_bar_admin', 'false' );
+}
+add_action("user_register", "set_user_admin_bar_false_by_default", 10, 1);
+
+
+//Added by ftbase END
+
 /**
  * Custom Typography Settings
  */

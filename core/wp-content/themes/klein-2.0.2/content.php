@@ -11,34 +11,13 @@
 	
 	<div class="entry-content">
 			<!-- blog author -->
-			<div class="blog-author">
-				<?php if( function_exists( 'bp_core_fetch_avatar' ) ){ ?>
-						<div class="blog-author-avatar">
-							<?php echo bp_core_fetch_avatar( array( 'type' => 'full', 'item_id' => $post->post_author ) ); ?>
-						</div>
-						<div class="blog-author-name center">
-							<?php the_author_meta( 'display_name' ); ?>
-						</div>
-						<div class="blog-author-links">
-							<div class="bp-profile-link">
-								<a class="tip" data-delay="0" data-placement="bottom" data-original-title="<?php _e( 'Profile', 'klein' ); ?>" href="<?php echo bp_core_get_user_domain( get_the_author_meta( 'ID' ) ); ?>">
-									<i class="glyphicon glyphicon-user"></i>
-								</a>
-							</div>
-							<div class="author-post-link blog-pad-left">
-								<a class="tip" data-delay="0" data-placement="bottom" data-original-title="<?php _e( 'Posts', 'klein' ); ?>" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-									<i class="glyphicon glyphicon-pencil"></i>
-								</a>
-							</div>
-						</div>
-				<?php }else{ ?>
-					<div class="blog-author-avatar no-bp"><?php echo get_avatar( $post->post_author, 75 ); ?></div>
-					<div class="blog-author-name no-bp center">
-						<a class="tip" data-delay="0" data-placement="bottom" data-original-title="<?php _e( 'Posts', 'klein' ); ?>" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-							<?php echo get_the_author(); ?>
-						</a>
-					</div>
-				<?php } ?>
+			<div class="look-like">
+				
+                <?php
+                    if(function_exists(kkLikeButton())){
+                        kkLikeButton();
+                    }
+                ?>
 			</div>
 			<!-- end blog author -->
 			<!-- blog content -->
@@ -49,7 +28,40 @@
 							<?php the_title(); ?>
 						</a>
 					</h2>
-				</div>	
+				</div>
+                
+                <div class="blog-author">
+                <?php if( function_exists( 'bp_core_fetch_avatar' ) ){ ?>
+						<!--
+                        <div class="blog-author-avatar">
+							<?php echo bp_core_fetch_avatar( array( 'type' => 'full', 'item_id' => $post->post_author ) ); ?>
+						</div>-->
+						
+						<div class="blog-author-links">
+                            <div class="blog-author-name center">
+                                
+                            </div>
+							<div class="bp-profile-link">
+								<a class="tip" data-delay="0" data-placement="bottom" data-original-title="<?php _e( 'Profile', 'klein' ); ?>" href="<?php echo bp_core_get_user_domain( get_the_author_meta( 'ID' ) ); ?>">
+									<?php the_author_meta( 'display_name' ); ?>
+								</a>
+							</div>
+							<div class="author-post-link blog-pad-left">
+								<a class="tip" data-delay="0" data-placement="bottom" data-original-title="<?php _e( 'Posts', 'klein' ); ?>" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+									<i class="glyphicon glyphicon-pencil"></i>
+								</a>
+							</div>
+						</div>
+                      </div>
+				<?php }else{ ?>
+					<div class="blog-author-avatar no-bp"><?php echo get_avatar( $post->post_author, 75 ); ?></div>
+					<div class="blog-author-name no-bp center">
+						<a class="tip" data-delay="0" data-placement="bottom" data-original-title="<?php _e( 'Posts', 'klein' ); ?>" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+							<?php echo get_the_author(); ?>
+						</a>
+					</div>
+				<?php } ?>
+                
 				<div class="blog-content-thumbnail">
 					<?php if( has_post_thumbnail() ){ ?>
 						<?php the_post_thumbnail( 'klein-post-thumbnail', array( 'class' => 'scale-to-grid' ) ); ?>

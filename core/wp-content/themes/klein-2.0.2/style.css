@@ -206,7 +206,7 @@ Tags: custom-header, custom-background, threaded-comments, sticky-post, translat
 /* #Links
 ================================================== */
 	a{ 
-		color: #16A085;
+		color: #333;
 		-webkit-transition: 125ms;
 		-moz-transition: 125ms;
 		-o-transition: 125ms;
@@ -533,10 +533,10 @@ footer.entry-meta .cat-links{
 
 .widget{
 	margin: 0px 0px 20px;
-	background: #1ABC9C;
+	background: none;
 	padding: 20px 20px 20px;
-	border-bottom: 5px solid #16A085;
-	color: #ECF0F1;
+	border-bottom: 1px solid #222;
+	color: #666;
 	-webkit-transition: 250ms;
 	-moz-transition: 250ms;
 	-o-transition: 250ms;
@@ -613,7 +613,7 @@ footer.entry-meta .cat-links{
 .widget input[type=text]{
 	width: 100%;
 }
-.widget a{ color: #fff;}
+.widget a{ color: #333;}
 #front-page-widgets-section-a .widget a{ color: #ECF0F1; }
 #front-page-widgets-section-c .widget a{ color: #7F8C8D; }
 #front-page-widgets-section-c .widget.widget_bp_core_members_widget a{ color: #ECF0F1; }
